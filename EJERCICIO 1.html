@@ -1,0 +1,65 @@
+<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <label> Digite un numero </label>
+        <input type="number" id="numero">
+        <button onclick="calcular()">Procesar</button>
+        <style>
+             body{
+            background-color: rgb(226, 231, 240);
+            font-style: italic;
+        }
+        table{
+            background-color: rgb(234, 241, 243);
+        }
+        </style>
+       <center>
+        <h1>USO CICLO FOR</h1>
+        <hr size="20" color="b">
+        <br>
+        <table border="5">
+           
+    <th>Numeros= <span id="Numeros"> </span> </th>
+    <th>Suma= <span id="suma"> </span>
+    <th>Pares= <span id="pares"></span></th>
+    <th>Impares= <span id="impares"> </span></th>
+    <th> Multiplos de 5= <span id="multiplos"> </span></th>
+    </table>
+</center> 
+    </body>
+    <script>
+        function calcular(){
+    var suma = 0;
+    var pares = 0;
+   var multiplos= 0;
+   var numeros = "";
+
+    var n = document.getElementById("numero").value;
+    for(var x = 1; x <= n; x++)
+    {
+        if (x < n )
+        numeros += x + ",";
+        else 
+        numeros += x;
+
+        suma += x;
+        if (x%2 == 0 )
+        pares += 1;
+
+      if (x%5 == 0) 
+      multiplos += 1;
+     
+    }
+    document.getElementById("suma").innerHTML = "<font color=black>" + suma + "</font>";
+    document.getElementById("pares").innerHTML = "<font color=black>" + pares + "</font>";
+    document.getElementById("impares").innerHTML = "<font color=black>" + (n - pares) + "</font>";
+    document.getElementById("multiplos").innerHTML = "<font color=black>" + multiplos + "</font>";
+    document.getElementById("Numeros").innerHTML = "<font color=black>" + numeros + "</font>";
+}
+    </script>
+</html>
+</html>
